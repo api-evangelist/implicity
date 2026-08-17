@@ -1,0 +1,67 @@
+generated: '2026-08-17'
+method: searched
+source: https://trust.implicity.com/
+docs: https://implicity.com/for-it-teams/
+summary: >-
+  Implicity's published conformance posture is entirely regulatory/organizational, not technical. The
+  trust center names seven compliance programs and the IT-teams page names four of them again. No
+  technical API standard can be asserted: Implicity publishes no OpenAPI, AsyncAPI, GraphQL SDL, FHIR
+  CapabilityStatement or SMART on FHIR discovery document, so every cross-cutting API standard below is
+  recorded as unknown rather than false — an absent contract is not a negative conformance finding.
+standards:
+- id: iso-27001
+  conforms: true
+  version: '2022'
+  evidence: 'trust.implicity.com lists "ISO 27001 : 2022" among its compliance documents'
+- id: iso-13485
+  conforms: true
+  evidence: 'trust.implicity.com lists ISO 13485 (medical-device quality management)'
+- id: soc2-type2
+  conforms: true
+  evidence: 'trust.implicity.com lists "SOC2 type 2 report"'
+- id: hds
+  conforms: true
+  evidence: 'trust.implicity.com lists HDS; implicity.com publishes a Bureau Veritas HDS certification image and implicity.com/for-it-teams/ names "HDS"'
+- id: bsi-c5
+  conforms: true
+  evidence: 'trust.implicity.com lists C5 (German BSI Cloud Computing Compliance Criteria Catalogue)'
+- id: hipaa
+  conforms: true
+  evidence: 'trust.implicity.com lists HIPAA; implicity.com/for-it-teams/ states "healthcare data compliance (HIPAA, GDPR, ISO 27001 and HDS)"'
+- id: gdpr
+  conforms: true
+  evidence: 'trust.implicity.com lists GDPR; privacy policy published at implicity.com/privacy-policy/'
+- id: fhir-r4
+  conforms: unknown
+  evidence: 'api.implicity.com/metadata, /fhir/metadata, /r4/metadata and /.well-known/smart-configuration all return 404; the IT-teams page describes bidirectional EHR integration without naming FHIR'
+- id: hl7-v2
+  conforms: unknown
+  evidence: 'no published integration specification; HL7 is not named anywhere on the public site'
+- id: smart-on-fhir
+  conforms: unknown
+  evidence: 'api.implicity.com/.well-known/smart-configuration returns 404'
+- id: oauth2
+  conforms: unknown
+  evidence: 'api.implicity.com/.well-known/oauth-authorization-server returns 404; no securitySchemes available because no OpenAPI is published'
+- id: oidc
+  conforms: unknown
+  evidence: 'no /.well-known/openid-configuration on any Implicity host (app.implicity.com answers 200 with an SPA shell for every path)'
+- id: rfc9457-problem-details
+  conforms: unknown
+  evidence: 'no OpenAPI and no public error reference; api.implicity.com returns a bare text/plain "Not Found" body'
+- id: openapi
+  conforms: false
+  evidence: 'no OpenAPI/Swagger document at any of 21 probed paths on api.implicity.com, nor on implicity.com or app.implicity.com'
+- id: asyncapi
+  conforms: false
+  evidence: 'no AsyncAPI document and no public webhook or event catalog'
+regulatory_context:
+- regime: EU MDR
+  note: >-
+    Implicity ships regulated cardiac monitoring software in Europe; ISO 13485 certification is the
+    quality-management standard that underpins CE marking. The public site does not state a CE class or
+    an FDA 510(k) number, so neither is asserted here.
+- regime: HDS (France)
+  note: French health-data hosting certification, required to host French patient data.
+- regime: HIPAA (US)
+  note: Claimed on both the trust center and the IT-teams page; Implicity operates in the US market.

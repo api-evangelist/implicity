@@ -1,25 +1,115 @@
 aid: implicity
 name: Implicity
-description: 'Implicity is a company surfaced as a portfolio company of serena and added to the API Evangelist
-  network as a stub for enrichment. Sector: healthtech. This profile is a lead awaiting the enrichment
-  pipeline.'
+description: 'Implicity is a Paris-based digital health company operating a vendor-neutral, cloud-based
+  cardiac remote monitoring platform. Its software ingests and normalizes transmissions from cardiac
+  implantable electronic devices (CIED) and implantable loop recorders across every major manufacturer,
+  then applies AI-based triage to surface clinically actionable alerts for care teams. The product family
+  spans CIED remote monitoring, heart-failure remote monitoring, an ILR ECG Analyzer, AF alert management,
+  SignalHF predictive AI, patient connectivity management, InLink in-clinic data capture, and an advanced
+  research tool for academic medical centers and life-science partners. Implicity markets a bidirectional
+  EHR/EMR integration and API framework to hospital IT teams, but publishes no public developer portal,
+  API reference, or machine-readable contract; integration is arranged through its sales and IT teams.
+  Security and compliance posture is published through a Bastion-hosted trust center covering ISO 27001:2022,
+  ISO 13485, SOC 2 Type 2, HDS, C5, HIPAA, and GDPR.'
+image: https://implicity.com/wp-content/uploads/LOGO-WEBSITE-1-1200x234.png
 url: https://raw.githubusercontent.com/api-evangelist/implicity/refs/heads/main/apis.yml
 x-type: company
 x-source: serena-portfolio
-x-tier: stub
-x-tier-reason: portfolio-lead
+x-tier: profiled
+x-tier-reason: enrichment-pass-2026-08-17-no-public-api-contract
 specificationVersion: '0.20'
 created: '2026-08-17'
 modified: '2026-08-17'
 tags:
 - Company
 - Healthtech
-apis: []
+- Digital Health
+- Remote Patient Monitoring
+- Cardiology
+- Medical Devices
+- Cardiac Implantable Electronic Devices
+- Artificial Intelligence
+- EHR Integration
+- Interoperability
+- France
+apis:
+- name: Implicity Platform API
+  description: 'Implicity markets a "comprehensive API and integration framework for seamless data exchange
+    with core hospital systems" and bidirectional EHR integration to hospital IT teams. The API host
+    api.implicity.com resolves and answers HTTP, but no public reference, developer portal, or
+    machine-readable contract (OpenAPI, GraphQL SDL, FHIR CapabilityStatement) is published at any probed
+    path — see x-coverage. Base URL below is the probed public API host, not a documented base.'
+  humanURL: https://implicity.com/for-it-teams/
+  baseURL: https://api.implicity.com
+  tags:
+  - Remote Patient Monitoring
+  - Cardiology
+  - EHR Integration
+  properties: []
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: TrustCenter
+  url: security/implicity-trust-center.yml
 - type: Website
   url: https://www.implicity.com/
+- type: Documentation
+  url: https://implicity.com/for-it-teams/
+- type: Support
+  url: https://implicity.com/contact/
+- type: Blog
+  url: https://implicity.com/news/
+- type: BlogRSS
+  url: https://implicity.com/feed/
+- type: GitHubOrganization
+  url: https://github.com/implicity-healthcare
+- type: SignUp
+  url: https://implicity.com/request-a-demo/
+- type: Login
+  url: https://app.implicity.com/
+- type: TermsOfService
+  url: https://implicity.com/terms-of-use/
+- type: PrivacyPolicy
+  url: https://implicity.com/privacy-policy/
+- type: Compliance
+  url: https://trust.implicity.com/
+- type: Packages
+  url: packages/implicity-packages.yml
+- type: Conformance
+  url: conformance/implicity-conformance.yml
+- type: DomainSecurity
+  url: security/implicity-domain-security.yml
+- type: LLMsTxt
+  url: llms/implicity-llms.txt
+- type: Plans
+  url: plans/implicity-plans-pricing.yml
+- type: RateLimits
+  url: rate-limits/implicity-rate-limits.yml
+x-enrichment:
+  date: '2026-08-17'
+  status: minimal
+  artifacts_added: 8
+  pass: local-v1
+x-coverage:
+  state: gated
+  reason: sales-gate
+  detail: >-
+    Implicity's IT-teams page advertises a "comprehensive API and integration framework for seamless data
+    exchange with core hospital systems" but publishes no reference for it — the only route to it is the
+    Request-a-Demo form, and the live API host api.implicity.com answers a bare text/plain "Not Found" on
+    all 21 paths probed, including /openapi.json, /graphql, /metadata and /.well-known/smart-configuration.
+  evidence:
+  - url: https://implicity.com/for-it-teams/
+    status: 200
+  - url: https://api.implicity.com/openapi.json
+    status: 404
+  - url: https://api.implicity.com/fhir/metadata
+    status: 404
+  - url: https://implicity.com/developers
+    status: 404
+  - url: https://implicity.com/request-a-demo/
+    status: 200
+  checked: '2026-08-17'

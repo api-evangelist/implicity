@@ -1,0 +1,62 @@
+generated: '2026-08-17'
+method: probed
+source: live HTTP probes, 2026-08-17
+summary: >-
+  No Implicity host serves a real /.well-known/ document. implicity.com, www.implicity.com,
+  api.implicity.com and patients-info.implicity.com return 404 on every probed path. app.implicity.com
+  (the Angular customer login SPA) returns HTTP 200 for EVERY /.well-known/* path with an identical
+  JavaScript redirect shell — a catch-all, not a document — so those 200s are recorded as MISSES and no
+  WellKnown or SecurityTxt pointer is emitted for this provider.
+hit_count: 0
+hosts:
+- host: https://implicity.com
+  documents:
+  - {path: /.well-known/security.txt, status: 404}
+  - {path: /.well-known/openid-configuration, status: 404}
+  - {path: /.well-known/oauth-authorization-server, status: 404}
+  - {path: /.well-known/api-catalog, status: 404}
+  - {path: /.well-known/ai-plugin.json, status: 404}
+  - {path: /.well-known/agent-card.json, status: 404}
+  - {path: /.well-known/agent.json, status: 404}
+  - {path: /llms.txt, status: 404}
+- host: https://www.implicity.com
+  documents:
+  - {path: /.well-known/security.txt, status: 404}
+  - {path: /.well-known/openid-configuration, status: 301, note: 'redirects to apex implicity.com, which 404s'}
+  - {path: /.well-known/api-catalog, status: 301, note: 'redirects to apex implicity.com, which 404s'}
+  - {path: /.well-known/agent-card.json, status: 301, note: 'redirects to apex implicity.com, which 404s'}
+  - {path: /llms.txt, status: 404}
+- host: https://api.implicity.com
+  note: >-
+    Real public API host (13.37.219.89, AWS eu-west-3). Answers a bare text/plain "Not Found" body on
+    every path probed, including the root — consistent with an API gateway with no anonymous routes.
+  documents:
+  - {path: /.well-known/security.txt, status: 404}
+  - {path: /.well-known/openid-configuration, status: 404}
+  - {path: /.well-known/oauth-authorization-server, status: 404}
+  - {path: /.well-known/api-catalog, status: 404}
+  - {path: /.well-known/agent-card.json, status: 404}
+  - {path: /.well-known/agent.json, status: 404}
+  - {path: /.well-known/smart-configuration, status: 404, note: 'SMART on FHIR discovery — absent'}
+  - {path: /.well-known/jwks.json, status: 404}
+- host: https://patients-info.implicity.com
+  documents:
+  - {path: /.well-known/security.txt, status: 404}
+  - {path: /.well-known/openid-configuration, status: 404}
+  - {path: /.well-known/agent-card.json, status: 404}
+  - {path: /.well-known/agent.json, status: 404}
+  - {path: /llms.txt, status: 404}
+- host: https://app.implicity.com
+  note: >-
+    FALSE POSITIVE HOST. Angular SPA that answers HTTP 200 with the same
+    "<script>function handleRedirecti..." shell for every path, including all /.well-known/* paths and
+    /llms.txt. No path returns a document. Every 200 below is recorded as a MISS.
+  documents:
+  - {path: /.well-known/security.txt, status: 200, document: false, body: spa-shell}
+  - {path: /.well-known/openid-configuration, status: 200, document: false, body: spa-shell}
+  - {path: /.well-known/oauth-authorization-server, status: 200, document: false, body: spa-shell}
+  - {path: /.well-known/api-catalog, status: 200, document: false, body: spa-shell}
+  - {path: /.well-known/ai-plugin.json, status: 200, document: false, body: spa-shell}
+  - {path: /.well-known/agent-card.json, status: 200, document: false, body: spa-shell}
+  - {path: /.well-known/agent.json, status: 200, document: false, body: spa-shell}
+  - {path: /llms.txt, status: 200, document: false, body: spa-shell}

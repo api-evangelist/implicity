@@ -1,0 +1,139 @@
+generated: '2026-08-17'
+method: searched
+source: https://www.npmjs.com/search?q=%40implicity
+summary: >-
+  Implicity publishes an @implicity npm scope containing seven first-party NestJS platform libraries.
+  These are INTERNAL infrastructure modules (logging, HTTP, query criteria, MinIO, RabbitMQ, Kong,
+  Consul) that Implicity's own microservices consume — they are NOT client SDKs for an Implicity API and
+  none of them wrap a public Implicity endpoint. No first-party Implicity API client library exists on
+  npm, PyPI, Maven Central, NuGet, pkg.go.dev, RubyGems, Packagist or crates.io. Every package in the
+  scope last published in 2019, and several carry the placeholder description "description", so the scope
+  is effectively abandoned as a public artifact.
+sdk_count: 0
+package_count: 7
+packages:
+- language: javascript
+  registry: npm
+  name: "@implicity/nest-logger"
+  url: https://www.npmjs.com/package/@implicity/nest-logger
+  install: npm install @implicity/nest-logger
+  official: true
+  sdk: false
+  kind: internal-platform-library
+  version: 0.0.5
+  published: '2019-10-10'
+  license: ISC
+  repository: https://github.com/implicity-healthcare/nest-logger
+  description: Implicity flavored logger for Nest.js service
+- language: javascript
+  registry: npm
+  name: "@implicity/nest-http"
+  url: https://www.npmjs.com/package/@implicity/nest-http
+  install: npm install @implicity/nest-http
+  official: true
+  sdk: false
+  kind: internal-platform-library
+  version: 2.0.0
+  published: '2019-12-20'
+  license: MIT
+  repository: https://github.com/implicity-healthcare/nest-http
+  description: null
+  note: npm description is the literal placeholder string "description".
+- language: javascript
+  registry: npm
+  name: "@implicity/nest-criteria"
+  url: https://www.npmjs.com/package/@implicity/nest-criteria
+  install: npm install @implicity/nest-criteria
+  official: true
+  sdk: false
+  kind: internal-platform-library
+  version: 1.2.1
+  published: '2019-12-20'
+  license: MIT
+  repository: https://github.com/implicity-healthcare/nest-criteria
+  description: null
+  note: npm description is the literal placeholder string "description".
+- language: javascript
+  registry: npm
+  name: "@implicity/nest-minio"
+  url: https://www.npmjs.com/package/@implicity/nest-minio
+  install: npm install @implicity/nest-minio
+  official: true
+  sdk: false
+  kind: internal-platform-library
+  version: 0.3.1
+  published: '2019-12-20'
+  license: MIT
+  repository: null
+  description: null
+  note: No repository declared in package metadata; npm description is the placeholder "description".
+- language: javascript
+  registry: npm
+  name: "@implicity/nest-rabbit"
+  url: https://www.npmjs.com/package/@implicity/nest-rabbit
+  install: npm install @implicity/nest-rabbit
+  official: true
+  sdk: false
+  kind: internal-platform-library
+  version: 0.3.2
+  published: '2019-12-20'
+  license: MIT
+  repository: null
+  description: null
+  note: No repository declared in package metadata; npm description is the placeholder "description".
+- language: javascript
+  registry: npm
+  name: "@implicity/nest-kong"
+  url: https://www.npmjs.com/package/@implicity/nest-kong
+  install: npm install @implicity/nest-kong
+  official: true
+  sdk: false
+  kind: internal-platform-library
+  version: 0.3.0
+  published: '2019-12-20'
+  license: MIT
+  repository: null
+  description: null
+  note: >-
+    No repository declared in package metadata. A Kong integration module is consistent with the bare
+    text/plain "Not Found" body api.implicity.com returns on every probed path, which reads as an API
+    gateway rather than an application 404.
+- language: javascript
+  registry: npm
+  name: "@implicity/nest-consul"
+  url: https://www.npmjs.com/package/@implicity/nest-consul
+  install: npm install @implicity/nest-consul
+  official: true
+  sdk: false
+  kind: internal-platform-library
+  version: 0.1.0
+  published: '2019-06-20'
+  license: MIT
+  repository: null
+  description: null
+  note: No repository declared in package metadata; npm description is the placeholder "description".
+registries_checked:
+- registry: npm
+  result: 7 first-party packages found under the @implicity scope; none is an API client SDK
+- registry: pypi
+  result: 404 for "implicity" — no package
+- registry: rubygems
+  result: no first-party package found
+- registry: crates.io
+  result: no first-party package found
+- registry: nuget
+  result: no first-party package found
+- registry: maven-central
+  result: no first-party package found
+- registry: pkg.go.dev
+  result: no first-party module found
+disambiguation: >-
+  The unscoped npm package "implicity" belongs to SimplicityMobile (an iOS authentication backend) and is
+  NOT this company. The GitHub org "implicityhq" (California, implicity.co) is a different company; the
+  Implicity profiled here is implicity-healthcare (Paris, www.implicity.com).
+x-decay:
+  newest_release: '2019-12-20'
+  years_since_release: 6
+  finding: >-
+    Every published package in the @implicity scope is more than six years old. Because none of them is an
+    API client SDK, this is an abandonment signal about the public npm scope, not about the platform API.

@@ -1,0 +1,23 @@
+generated: '2026-08-17'
+method: searched
+source: https://implicity.com/sitemaps.xml
+plan_count: 0
+currency: null
+model: contact-sales
+note: >-
+  Implicity publishes no pricing or plans of any kind. implicity.com/pricing returns 404 and the full
+  page sitemap (43 URLs, implicity.com/page-sitemap1.xml) contains no pricing, plans, packages or tiers
+  page. The commercial motion is a "Request a demo" form at implicity.com/request-a-demo/ aimed at
+  hospital care teams, IT teams, and admin/billing teams. This is expected for enterprise-contracted
+  regulated medical software sold to health systems, but it means no per-tier quota, overage or limit is
+  publicly readable.
+plans: []
+evidence:
+- url: https://implicity.com/pricing
+  status: 404
+- url: https://implicity.com/page-sitemap1.xml
+  status: 200
+  note: 43 page URLs enumerated; none is a pricing or plans page
+- url: https://implicity.com/request-a-demo/
+  status: 200
+  note: the demo-request form that stands in for published pricing

@@ -1,0 +1,26 @@
+generated: '2026-08-17'
+method: probed
+source: live DNS/TLS/HTTP probes of apis.yml + OpenAPI hosts
+hosts:
+- host: www.implicity.com
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Sep 23 07:03:50 2026 GMT
+  hsts: false
+- host: implicity.com
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Nov 12 06:08:39 2026 GMT
+  hsts: false
+- host: api.implicity.com
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Feb  4 23:59:59 2027 GMT
+  hsts: null
+domains:
+- domain: implicity.com
+  dnssec: false
+  caa: []
+  spf: true
+  dmarc: true
+  dmarc_policy: none

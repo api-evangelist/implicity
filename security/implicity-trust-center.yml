@@ -1,0 +1,52 @@
+generated: '2026-08-17'
+method: searched
+probe: true
+source: https://trust.implicity.com/
+url: https://trust.implicity.com/
+platform: Bastion Trust Center
+summary: >-
+  Implicity publishes its security, privacy and compliance posture through a Bastion-hosted trust center
+  at trust.implicity.com. The landing page advertises 7 compliance documents and 176 controls grouped into
+  Business Operations, Cloud Security, Human Resources and Data domains. Individual documents require a
+  request through the trust center; the certification names below are published on the public landing page.
+documents_advertised: 7
+controls_advertised: 176
+certifications:
+- ISO 27001:2022
+- ISO 13485
+- SOC 2 Type 2
+- HDS
+- C5
+- HIPAA
+- GDPR
+control_domains:
+- name: Business Operations
+  examples: [Production Deployment, Access Control selection, Change Management Workflow]
+- name: Cloud Security
+  examples: [Host hardening, Infrastructure as code, Firewalls]
+- name: Human Resources
+  examples: [Board Oversight, Termination process, Employee performance reviews]
+- name: Data
+  examples: [File systems encryption, File store encryption, Data Retention]
+notes:
+- 'HDS is the French Hebergeur de Donnees de Sante healthcare-data hosting certification; the company
+  also publishes a Bureau Veritas HDS certification image on implicity.com.'
+- 'ISO 13485 is the medical-device quality-management standard, consistent with Implicity shipping
+  regulated cardiac monitoring software.'
+- 'No security contact, responsible-disclosure policy, bug-bounty program or subprocessor list is
+  published on the trust center landing page, and /.well-known/security.txt returns 404 on every
+  Implicity host probed — see security/implicity-vulnerability-disclosure absence in
+  well-known/implicity-well-known.yml.'
+evidence:
+- source: https://trust.implicity.com/
+  http_status: 200
+  fetched: '2026-08-17'
+  keywords:
+  - iso 27001 : 2022
+  - iso 13485
+  - soc2 type 2 report
+  - hds
+  - c5
+  - hipaa
+  - gdpr
+  - trust center

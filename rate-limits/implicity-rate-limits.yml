@@ -1,0 +1,22 @@
+generated: '2026-08-17'
+method: searched
+source: https://implicity.com/for-it-teams/
+limit_count: 0
+headers: []
+status_on_exhaustion: null
+note: >-
+  Implicity documents no rate limits. There is no public developer portal, API reference or
+  machine-readable contract to read limits from, and the marketing page that describes the "comprehensive
+  API and integration framework" (implicity.com/for-it-teams/) names no quota, throttle, window or
+  response header. Nothing could be observed on a live unauthenticated response either: every path probed
+  on api.implicity.com returns a bare text/plain "Not Found" with no RateLimit-*, X-RateLimit-* or
+  Retry-After header. An honest zero — limits may well exist behind the customer contract, but none is
+  published.
+limits: []
+evidence:
+- url: https://implicity.com/for-it-teams/
+  status: 200
+  note: names an API and integration framework; publishes no limits
+- url: https://api.implicity.com/
+  status: 404
+  note: bare text/plain "Not Found"; no rate-limit headers on the response
