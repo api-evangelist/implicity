@@ -11,6 +11,17 @@ description: 'Implicity is a Paris-based digital health company operating a vend
   API reference, or machine-readable contract; integration is arranged through its sales and IT teams.
   Security and compliance posture is published through a Bastion-hosted trust center covering ISO 27001:2022,
   ISO 13485, SOC 2 Type 2, HDS, C5, HIPAA, and GDPR.'
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 image: https://implicity.com/wp-content/uploads/LOGO-WEBSITE-1-1200x234.png
 url: https://raw.githubusercontent.com/api-evangelist/implicity/refs/heads/main/apis.yml
 x-type: company
