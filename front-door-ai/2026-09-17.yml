@@ -1,0 +1,29 @@
+# Front Door AI Index — implicity — 2026-09-17
+# AI vocabulary counted on the provider's root page. Generated; do not edit.
+# `score` is null unless ownership is `own` — see front_door_ai.py.
+front_door_ai:
+  slug: implicity
+  lexicon_version: '1.0'
+  probed_at: '2026-09-17'
+  host: www.implicity.com
+  final_host: implicity.com
+  ownership: own
+  owner: implicity
+  shares_host_with: null
+  inherited_from: null
+  verdict: scored
+  score: 11
+  host_score: 11
+  density: 10.69
+  words: 1029
+  tiers:
+    agentic: 0
+    core: 11
+    model: 0
+  ambiguous: 6
+  top_terms:
+    AI: 10
+    predictive: 3
+    smart: 2
+    automation: 1
+    machine learning: 1
