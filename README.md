@@ -64,6 +64,104 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Implicity is a company surfaced as a portfolio company of serena and added to the API Evangelist network as a stub for enrichment. Sector: healthtech. This profile is a lead awaiting the enrichment pipeline.
+Implicity is a Paris-based digital health company operating a vendor-neutral, cloud-based cardiac remote monitoring platform. Its software ingests and normalizes transmissions from cardiac implantable electronic devices (CIED) and implantable loop recorders across every major manufacturer, then applies AI-based triage to surface clinically actionable alerts for care teams. The product family spans CIED remote monitoring, heart-failure remote monitoring, an ILR ECG Analyzer, AF alert management, SignalHF predictive AI, patient connectivity management, InLink in-clinic data capture, and an advanced research tool for academic medical centers and life-science partners. Implicity markets a bidirectional EHR/EMR integration and API framework to hospital IT teams, but publishes no public developer portal, API reference, or machine-readable contract; integration is arranged through its sales and IT teams. Security and compliance posture is published through a Bastion-hosted trust center covering ISO 27001:2022, ISO 13485, SOC 2 Type 2, HDS, C5, HIPAA, and GDPR.
 
-Source: portfolio company of [serena](https://github.com/api-evangelist/serena) — https://www.implicity.com/
+**Areas:** Company · Health Tech · Digital Health · Remote Patient Monitoring · Cardiology · Medical Devices · Cardiac Implantable Electronic Devices · Artificial Intelligence · EHR Integration · Interoperability · France
+
+## Implicity on APIs.io
+
+Everything profiled for Implicity is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/implicity/](https://apis.io/providers/implicity/)** — or go straight to one of the APIs or properties below.
+
+### APIs (1)
+
+- [Implicity Platform API](https://apis.io/apis/implicity/implicity-platform-api/) — Implicity markets a "comprehensive API and integration framework for seamless data exchange with core hospital systems" and bidirectional EHR integration to…
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### Security (2)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Implicity Domain Security](https://apis.io/security/implicity/implicity-domain-security/)
+- [Implicity Trust Center](https://apis.io/security/implicity/implicity-trust-center/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Implicity Plans Pricing](https://apis.io/plans/implicity/implicity-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Implicity Rate Limits](https://apis.io/rate-limits/implicity/implicity-rate-limits/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.implicity.com/)
+- [Documentation](https://implicity.com/for-it-teams/)
+- [Sign up](https://implicity.com/request-a-demo/)
+- [Support](https://implicity.com/contact/)
+- [Blog](https://implicity.com/news/)
+- [Compliance](https://trust.implicity.com/)
+- [Terms of service](https://implicity.com/terms-of-use/)
+- [Privacy policy](https://implicity.com/privacy-policy/)
+- [GitHub](https://github.com/implicity-healthcare)
+
+## API Evangelist rating
+
+**Kin Score 24.0** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 66.1 |
+| Contract quality | 0.0 |
+| Contract governance | 18.2 |
+| Operational transparency | 2.6 |
+| Developer ergonomics | 16.7 |
+| Access clarity | 50.0 |
+
+**Agent readiness 2.5** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | documented (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 22.1** — Health
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/implicity/](https://apis.io/providers/implicity/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Implicity: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/implicity/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
